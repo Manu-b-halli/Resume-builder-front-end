@@ -64,6 +64,7 @@
     "workbox-window": "^7.3.0",
     "zod": "^3.24.2"
   },
+  "homepage": "https://your-site.com/subdirectory",
   "devDependencies": {
     "@types/node": "^20.17.30",
     "@types/react": "^18.2.66",
