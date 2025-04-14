@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume-maker by manu</title>
+    <base href="/" />
+    <script type="module" crossorigin src="/assets/index-DQSIVcwl.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DfNoN4U1.css">
+  </head>
+  <body>
+    <div id="root"></div>
+
+
+    <!-- // code to disable debugging tools -->
+     <!-- Add to your index.html -->
+<script>
+  // Disable right-click
+  document.addEventListener('contextmenu', event => event.preventDefault());
+
+  // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+  document.addEventListener('keydown', function(event) {
+    if (
+      event.keyCode === 123 || // F12
+      (event.ctrlKey && event.shiftKey && event.keyCode === 73) || // Ctrl+Shift+I
+      (event.ctrlKey && event.shiftKey && event.keyCode === 74) || // Ctrl+Shift+J
+      (event.ctrlKey && event.keyCode === 85) // Ctrl+U
+    ) {
+      event.preventDefault();
+      return false;
+    }
+  });
+
+  // Detect if DevTools is open
+  let devToolsOpen = false;
+  
+  // Method 1: Check console.log timing
+  const detectDevTools = () => {
+    const start = performance.now();
+    debugger;
+    const end = performance.now();
+    
+    if (end - start > 100) { // DevTools is likely open
+      devToolsOpen = true;
+      alert("Debug tools are not allowed on this site.");
+      window.location.href = 'about:blank'; // Redirect or take action
+    }
+  };
+  
+  // Run detection periodically
+  setInterval(detectDevTools, 1000);
+
+  // Method 2: Window size detection
+  const checkWindowSize = () => {
+    if (
+      window.outerHeight - window.innerHeight > 200 || 
+      window.outerWidth - window.innerWidth > 200
+    ) {
+      devToolsOpen = true;
+      alert("Debug tools are not allowed on this site.");
+      window.location.href = 'about:blank'; // Redirect or take action
+    }
+  };
+
+  // Check on resize and periodically
+  window.addEventListener('resize', checkWindowSize);
+  setInterval(checkWindowSize, 1000);
+</script>
+
+  </body>
+</html>
